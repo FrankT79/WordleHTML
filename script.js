@@ -11,6 +11,9 @@ const solution = document.getElementById("solution");
 let counter = 1;
 let playing = 1;
 let helper = 0;
+let score = document.getElementById("score");
+let scoreCount = localStorage.getItem("scoreCount") || 0;
+score.innerHTML = `The score is ${scoreCount}`;
 
 //setup keyboard on pageload
 (function Keyboard() {
@@ -109,6 +112,9 @@ function play(){
                 }
             }
             if(guess === word){
+                 scoreCount ++;
+                localStorage.setItem("scoreCount", scoreCount);
+                score.innerHTML = `Youre score is ${scoreCount}`;
                 keyboard.removeEventListener("click",handleClick);
                 gameover.style.visibility = 'visible';
             };
