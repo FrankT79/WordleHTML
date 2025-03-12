@@ -19,6 +19,11 @@ body{
    padding-bottom: 1rem;
     justify-self: center;
 }
+.container h2{
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+    justify-self: center;
+}
 .newGame {
     display: grid;
     justify-self: center;
